@@ -1,0 +1,18 @@
+[push]
+	default = simple
+[alias]
+  last = log -1 HEAD
+  unstage = reset HEAD --
+  continue = reset HEAD^1
+  edit = commit --amend --no-edit
+  special = !git ls-files -v | grep -v "^H"
+  ignore = update-index --assume-unchanged
+  no-ignore = update-index --no-assume-unchanged
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
+  skip = update-index --skip-worktree
+  no-skip = update-index --no-skip-worktree
+  skipped = !git ls-files -v | grep -i "^s"
+  gl = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(green)(%ar)%C(reset) %C(bold black)%s%C(reset) %C(blue)- %an%C(reset)%C(bold red)%d%C(reset)'
+  gla = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(green)(%ar)%C(reset) %C(bold black)%s%C(reset) %C(blue)- %an%C(reset)%C(bold red)%d%C(reset)' --all
+  gl2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold red)%d%C(reset)%n''          %C(bold black)%s%C(reset) %C(blue)- %an%C(reset)'
+  gla2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold red)%d%C(reset)%n''          %C(bold black)%s%C(reset) %C(blue)- %an%C(reset)' --all
