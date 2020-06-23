@@ -1,4 +1,4 @@
-echo 'Loading .bash_aliases'
+echo 'Sourcing .bash_aliases'
 
 # Git
 alias gitka='gitk --all &>/dev/null &'

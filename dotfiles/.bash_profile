@@ -1,4 +1,4 @@
-echo 'Loading .bash_profile'
+echo 'Sourcing .bash_profile'
 
 source ~/.bash_aliases
 source ~/.bash_prompt
